@@ -1,0 +1,25 @@
+/* Navbar container */
+.navbar {
+    overflow: hidden;
+    background-color: #4169E1;
+    margin:  0 9% 2%;
+    display:flex;
+    justify-content: space-evenly;
+    display: flex;
+}
+
+/* Links inside the navbar */
+.navbar a {
+    font-size: 16px;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    display: block;
+    flex-grow: 1;
+}
+
+/* Add a green background color to navbar links on hover */
+.navbar a:hover {
+    background-color: #2E8B57;
+}
