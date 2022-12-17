@@ -1,0 +1,29 @@
+body{
+    display: flex;
+    flex-direction: column;
+}
+
+#titre {
+    align-self: center;
+    font-size: 400%;
+    font-weight: bold;
+}
+
+form {
+    border: 1px solid black;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    align-self: center;
+}
+
+input[type=text] {
+    margin-bottom: 10px;;
+}
+
+input[type=submit] {
+    margin-top: 10px;;
+    width: 40%;
+    align-self: center;
+}
