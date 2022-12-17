@@ -11,7 +11,7 @@
 <body>  
     <header>
         <div><?php echo "Bienvenue $pseudo" ?></div>
-        <div>Titre</div>
+        <div id="titre"> Site Weeb </div>
 
         <div class="navbar">
             <a href="connexion.php">A</a>

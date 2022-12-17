@@ -1,3 +1,14 @@
+
+header {
+    display: flex;
+}
+
+#titre {
+    align-self: center;
+    font-size: 400%;
+    font-weight: bold;
+}
+
 /* Navbar container */
 .navbar {
     overflow: hidden;
@@ -23,3 +34,4 @@
 .navbar a:hover {
     background-color: #2E8B57;
 }
+
