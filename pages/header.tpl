@@ -9,8 +9,10 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
  </head>  
 <body>  
+
+    <div><?php echo "Bienvenue $pseudo" ?></div>
+
     <header>
-        <div><?php echo "Bienvenue $pseudo" ?></div>
         <div id="titre"> Site Weeb </div>
 
         <div class="navbar">
@@ -20,6 +22,8 @@
             <a href="">G</a>
             <a href="">C</a>
         </div>
+
     </header>
+    
 </body>
 </html>

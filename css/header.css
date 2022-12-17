@@ -1,19 +1,10 @@
-header {
-    display: flex;
-}
 
-#titre {
-    align-self: center;
-    font-size: 400%;
-    font-weight: bold;
-}
 
 /* Navbar container */
 .navbar {
+    flex-grow: 1;
     overflow: hidden;
     background-color: #4169E1;
-    margin:  0 9% 2%;
-    display:flex;
     justify-content: space-evenly;
     display: flex;
 }
@@ -33,4 +24,5 @@ header {
 .navbar a:hover {
     background-color: #2E8B57;
 }
+
 
