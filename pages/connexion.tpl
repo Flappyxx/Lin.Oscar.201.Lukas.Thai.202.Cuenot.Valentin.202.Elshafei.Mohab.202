@@ -16,7 +16,7 @@
         <label>Pseudo : </label>
         <input name="pseudo" type="text" value= "<?= $pseudo?>">
         <label>Mot de passe : </label>
-        <input name="mdp" type="text" value= "<?= $mdp?>">
+        <input name="mdp" type="password" value= "<?= $mdp?>">
         <input type="submit" value="Confirmer">
     </form>
     <div class="error"><?php echo "$msg"?></div>
