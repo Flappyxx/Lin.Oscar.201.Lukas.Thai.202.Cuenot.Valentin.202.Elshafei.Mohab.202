@@ -23,4 +23,15 @@
     background-color: #2E8B57;
 }
 
+header {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+}
+
+#titre {
+    align-self: center;
+    font-size: 400%;
+    font-weight: bold;
+}
 

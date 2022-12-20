@@ -3,6 +3,12 @@ body{
     flex-direction: column;
 }
 
+#titre {
+    align-self: center;
+    font-size: 400%;
+    font-weight: bold;
+}
+
 form {
     border: 1px solid black;
     width: 50%;

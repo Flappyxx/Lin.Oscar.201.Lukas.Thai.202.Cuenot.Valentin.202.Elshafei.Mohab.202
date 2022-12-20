@@ -3,7 +3,7 @@
  <head>  
   <meta charset="utf-8">
   <link rel="stylesheet" href="../css/global.css">
-  <link rel="stylesheet" href="../css/header.css">
+  <link rel="stylesheet" href="../css/head.css">
   <title>Titre de la page</title>
   
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
@@ -24,6 +24,6 @@
         </div>
 
     </header>
-    
+
 </body>
 </html>
