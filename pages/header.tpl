@@ -18,6 +18,7 @@
             <a href="accueil.php">Accueil</a>
             <a href="recherche.php">Recherche Anime</a>
             <a href="">Carte Studio</a>
+            <a href="">Compte</a>
             <a href="">A propos</a>
         </div>
 
