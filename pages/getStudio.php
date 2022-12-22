@@ -2,7 +2,7 @@
 <?php
 session_start();
 require_once('connectSQL.php');
-$sql="SELECT Latitude, Longitude FROM  Studio";
+$sql="SELECT Latitude, Longitude, Nom, Description, Path FROM  Studio";
 $commande = $pdo->prepare($sql);
 $bool = $commande->execute();
 if ($bool) {
