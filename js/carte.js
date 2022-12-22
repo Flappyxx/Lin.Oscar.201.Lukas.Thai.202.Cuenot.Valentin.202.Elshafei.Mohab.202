@@ -16,7 +16,6 @@ $(document).ready(function(){
     	/*On peut par exemple convertir cette réponse en chaine JSON et insérer
     	 * cette chaine dans un div id="res"*/
     	.done(function(response){
-    	    let data = JSON.stringify(response);
 		for(let ligne=0;ligne<response.length;ligne++){
 			let studio = L.marker([parseFloat(response[ligne].Latitude), parseFloat(response[ligne].Longitude)]);
 			studio.addTo(map);
