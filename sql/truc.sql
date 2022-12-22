@@ -68,7 +68,7 @@ CREATE TABLE IF NOT EXISTS `studio` (
   `Latitude` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
   `Longitude` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
   `Description` text CHARACTER SET armscii8 COLLATE armscii8_bin NOT NULL,
-  `Path` text COLLATE armscii8_bin,
+  `Path` varchar(50) COLLATE armscii8_bin,
   PRIMARY KEY (`Id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=armscii8 ;
 
