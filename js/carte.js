@@ -20,6 +20,9 @@ $(document).ready(function(){
 			let studio = L.marker([parseFloat(response[ligne].Latitude), parseFloat(response[ligne].Longitude)]);
 			studio.addTo(map);
 			liste_marqueur.push(studio);
+			let html ="<h3>Studio "+response[ligne].Nom+"</h3><p>"+response[ligne].Description+"</p><center><img width = '100%' src='"+response[ligne].Path+"'></center>";
+			let popup = L.popup({keepInView:true,closeButton:true}).setContent(html);
+			studio.bindPopup(popup);
 		}
     	})
 	});
