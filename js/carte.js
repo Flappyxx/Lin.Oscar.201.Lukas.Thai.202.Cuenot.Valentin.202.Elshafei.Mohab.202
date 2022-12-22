@@ -17,8 +17,10 @@ $(document).ready(function(){
     	 * cette chaine dans un div id="res"*/
     	.done(function(response){
     	    let data = JSON.stringify(response);
-		let studio = L.marker([parseFloat(response.Latitude), parseFloat(response.Longitude)]);
-		studio.addTo(map);
-		liste_marqueur.push(studio);
+		for(let ligne=0;ligne<response.length;ligne++){
+			let studio = L.marker([parseFloat(response[ligne].Latitude), parseFloat(response[ligne].Longitude)]);
+			studio.addTo(map);
+			liste_marqueur.push(studio);
+		}
     	})
 	});
