@@ -8,7 +8,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script src="../js/recherche.js"></script>
  </head>  
-<body>  
+<body>
 
     <div id="main-content">
 
@@ -17,7 +17,7 @@
         <div>
           <input id="test" value=""> <button>rechercher</button><br>
         </div>
-        
+
         <div style="white-space:pre-line;" id="rep"></div>
 
         <img src="">
