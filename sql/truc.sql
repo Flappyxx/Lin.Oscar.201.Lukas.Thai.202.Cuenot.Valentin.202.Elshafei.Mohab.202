@@ -16,13 +16,13 @@
 
 
 -- Listage de la structure de la base pour siteweb
-CREATE DATABASE IF NOT EXISTS `siteweb` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci */ /*!80016 DEFAULT ENCRYPTION='N' */;
+CREATE DATABASE IF NOT EXISTS `siteweb` /*!40100 DEFAULT CHARACTER SET utf8mb4  */ /*!80016 DEFAULT ENCRYPTION='N' */;
 USE `siteweb`;
 
 -- Listage de la structure de table siteweb. anime
 CREATE TABLE IF NOT EXISTS `anime` (
   `Id` int unsigned NOT NULL AUTO_INCREMENT,
-  `Titre` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+  `Titre` varchar(100) CHARACTER SET utf8mb4  NOT NULL,
   `IdStudio` int unsigned DEFAULT NULL,
   PRIMARY KEY (`Id`) USING BTREE,
   KEY `FK_anime_studio` (`IdStudio`),
@@ -51,9 +51,9 @@ INSERT INTO `appartenir` (`IdPerso`, `IdAnime`) VALUES
 -- Listage de la structure de table siteweb. personnage
 CREATE TABLE IF NOT EXISTS `personnage` (
   `Id` int unsigned NOT NULL AUTO_INCREMENT,
-  `Nom` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
-  `Prenom` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
-  `Path` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
+  `Nom` varchar(50) CHARACTER SET utf8mb4  DEFAULT NULL,
+  `Prenom` varchar(50) CHARACTER SET utf8mb4  DEFAULT NULL,
+  `Path` varchar(100) CHARACTER SET utf8mb4  DEFAULT NULL,
   PRIMARY KEY (`Id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=armscii8 ;
 
@@ -64,9 +64,9 @@ INSERT INTO `personnage` (`Id`, `Nom`, `Prenom`, `Path`) VALUES
 -- Listage de la structure de table siteweb. studio
 CREATE TABLE IF NOT EXISTS `studio` (
   `Id` int unsigned NOT NULL AUTO_INCREMENT,
-  `Nom` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
-  `Latitude` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
-  `Longitude` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+  `Nom` varchar(50) CHARACTER SET utf8mb4  NOT NULL,
+  `Latitude` varchar(50) CHARACTER SET utf8mb4  NOT NULL,
+  `Longitude` varchar(50) CHARACTER SET utf8mb4  NOT NULL,
   `Description` text CHARACTER SET armscii8 COLLATE armscii8_bin NOT NULL,
   `Path` varchar(50) COLLATE armscii8_bin,
   PRIMARY KEY (`Id`)
@@ -78,8 +78,8 @@ INSERT INTO `studio` (`Id`, `Nom`, `Latitude`, `Longitude`, `Description`, `Path
 
 -- Listage de la structure de table siteweb. utilisateur
 CREATE TABLE IF NOT EXISTS `utilisateur` (
-  `Identifiant` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
-  `Password` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+  `Identifiant` varchar(50) CHARACTER SET utf8mb4  NOT NULL,
+  `Password` varchar(100) CHARACTER SET utf8mb4  NOT NULL,
   PRIMARY KEY (`Identifiant`)
 ) ENGINE=InnoDB DEFAULT CHARSET=armscii8 ;
 

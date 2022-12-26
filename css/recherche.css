@@ -1,0 +1,8 @@
+#main-content {
+    display: flex;
+    flex-direction: column;
+}
+
+#main-content * {
+    text-align: center;
+}

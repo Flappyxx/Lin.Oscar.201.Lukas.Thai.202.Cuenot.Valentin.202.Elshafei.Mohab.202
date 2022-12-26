@@ -14,10 +14,10 @@
 
         <p>Recherche d'anime</p>
 
-        <input id="test" value="">
-
-        <button>rechercher</button><br>
-
+        <div>
+          <input id="test" value=""> <button>rechercher</button><br>
+        </div>
+        
         <div style="white-space:pre-line;" id="rep"></div>
 
         <img src="">
