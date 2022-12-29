@@ -16,13 +16,13 @@
 
 
 -- Listage de la structure de la base pour siteweb
-CREATE DATABASE IF NOT EXISTS `siteweb` /*!40100 DEFAULT CHARACTER SET utf8mb4  */ /*!80016 DEFAULT ENCRYPTION='N' */;
+CREATE DATABASE IF NOT EXISTS `siteweb` /*!40100 DEFAULT CHARACTER SET utf8mb4 */ /*!80016 DEFAULT ENCRYPTION='N' */;
 USE `siteweb`;
 
 -- Listage de la structure de table siteweb. anime
 CREATE TABLE IF NOT EXISTS `anime` (
   `Id` int unsigned NOT NULL AUTO_INCREMENT,
-  `Titre` varchar(100) CHARACTER SET utf8mb4  NOT NULL,
+  `Titre` varchar(100) CHARACTER SET utf8mb4 NOT NULL,
   `IdStudio` int unsigned DEFAULT NULL,
   PRIMARY KEY (`Id`) USING BTREE,
   KEY `FK_anime_studio` (`IdStudio`),
@@ -48,12 +48,27 @@ CREATE TABLE IF NOT EXISTS `appartenir` (
 INSERT INTO `appartenir` (`IdPerso`, `IdAnime`) VALUES
 	(1, 1);
 
+-- Listage de la structure de table siteweb. endroit
+CREATE TABLE IF NOT EXISTS `endroit` (
+  `Id` int unsigned NOT NULL AUTO_INCREMENT,
+  `Nom` varchar(50) CHARACTER SET utf8mb4 NOT NULL,
+  `Latitude` varchar(50) CHARACTER SET utf8mb4 NOT NULL,
+  `Longitude` varchar(50) CHARACTER SET utf8mb4 NOT NULL,
+  `Description` text CHARACTER SET utf8mb4 NOT NULL,
+  `Path` varchar(50) CHARACTER SET utf8mb4 DEFAULT NULL,
+  PRIMARY KEY (`Id`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=armscii8 ;
+
+-- Listage des données de la table siteweb.endroit : ~0 rows (environ)
+INSERT INTO `endroit` (`Id`, `Nom`, `Latitude`, `Longitude`, `Description`, `Path`) VALUES
+	(1, 'Camp Motsu', '35.47373341622373', '138.57340485767025', 'Dans Yuru Camp au 1er épisode de la saison 1, c\'est l\'endroit où Rin s\'est reposée. ', '../img/Motsu_Camp.jpg');
+
 -- Listage de la structure de table siteweb. personnage
 CREATE TABLE IF NOT EXISTS `personnage` (
   `Id` int unsigned NOT NULL AUTO_INCREMENT,
-  `Nom` varchar(50) CHARACTER SET utf8mb4  DEFAULT NULL,
-  `Prenom` varchar(50) CHARACTER SET utf8mb4  DEFAULT NULL,
-  `Path` varchar(100) CHARACTER SET utf8mb4  DEFAULT NULL,
+  `Nom` varchar(50) CHARACTER SET utf8mb4 DEFAULT NULL,
+  `Prenom` varchar(50) CHARACTER SET utf8mb4 DEFAULT NULL,
+  `Path` varchar(100) CHARACTER SET utf8mb4 DEFAULT NULL,
   PRIMARY KEY (`Id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=armscii8 ;
 
@@ -64,22 +79,22 @@ INSERT INTO `personnage` (`Id`, `Nom`, `Prenom`, `Path`) VALUES
 -- Listage de la structure de table siteweb. studio
 CREATE TABLE IF NOT EXISTS `studio` (
   `Id` int unsigned NOT NULL AUTO_INCREMENT,
-  `Nom` varchar(50) CHARACTER SET utf8mb4  NOT NULL,
-  `Latitude` varchar(50) CHARACTER SET utf8mb4  NOT NULL,
-  `Longitude` varchar(50) CHARACTER SET utf8mb4  NOT NULL,
-  `Description` text CHARACTER SET armscii8 COLLATE armscii8_bin NOT NULL,
-  `Path` varchar(50) COLLATE armscii8_bin,
+  `Nom` varchar(50) CHARACTER SET utf8mb4 NOT NULL,
+  `Latitude` varchar(50) CHARACTER SET utf8mb4 NOT NULL,
+  `Longitude` varchar(50) CHARACTER SET utf8mb4 NOT NULL,
+  `Description` text CHARACTER SET utf8mb4 NOT NULL,
+  `Path` varchar(50) CHARACTER SET utf8mb4 DEFAULT NULL,
   PRIMARY KEY (`Id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=armscii8 ;
 
 -- Listage des données de la table siteweb.studio : ~0 rows (environ)
 INSERT INTO `studio` (`Id`, `Nom`, `Latitude`, `Longitude`, `Description`, `Path`) VALUES
-	(1, 'Ghibli', '35.70320', '139.52924', 'Le studio qui a produit de nombreux film comme Mon Voisin Totoro', '../img/ghibli.jpg');
+	(1, 'Ghibli', '35.70320', '139.52924', 'Le studio qui a produit de nombreux film comme Mon Voisin Totoro.', '../img/ghibli.jpg');
 
 -- Listage de la structure de table siteweb. utilisateur
 CREATE TABLE IF NOT EXISTS `utilisateur` (
-  `Identifiant` varchar(50) CHARACTER SET utf8mb4  NOT NULL,
-  `Password` varchar(100) CHARACTER SET utf8mb4  NOT NULL,
+  `Identifiant` varchar(50) CHARACTER SET utf8mb4 NOT NULL,
+  `Password` varchar(100) CHARACTER SET utf8mb4 NOT NULL,
   PRIMARY KEY (`Identifiant`)
 ) ENGINE=InnoDB DEFAULT CHARSET=armscii8 ;
 
