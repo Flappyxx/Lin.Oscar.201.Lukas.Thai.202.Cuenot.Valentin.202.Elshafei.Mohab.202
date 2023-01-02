@@ -7,7 +7,8 @@ $(document).ready(function(){
 	var icone_endroit = L.icon({
     iconUrl: '../img/endroit.svg',
 	iconSize:     [40, 40],
-	iconAnchor:   [20, 10]
+	iconAnchor:   [20, 40],
+	popupAnchor: [0, -31]
 	});
 	$.ajax({
         	//L'URL de la requête 
