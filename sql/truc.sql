@@ -61,8 +61,11 @@ CREATE TABLE IF NOT EXISTS `endroit` (
 
 -- Listage des données de la table siteweb.endroit : ~0 rows (environ)
 INSERT INTO `endroit` (`Id`, `Nom`, `Latitude`, `Longitude`, `Description`, `Path`) VALUES
-	(1, 'Camp Motsu', '35.47373341622373', '138.57340485767025', 'Dans Yuru Camp au 1er épisode de la saison 1, c\'est l\'endroit où Rin s\'est reposée. ', '../img/Motsu_Camp.jpg');
-
+	(1, 'Camp Motsu', '35.47373341622373', '138.57340485767025', 'Dans Yuru Camp au 1er épisode de la saison 1, c\'est l\'endroit où Rin s\'est reposée. ', '../img/Motsu_Camp.jpg'),
+	(2, 'La tente de Rin à Fumotoppara ', '35.39983774689711', '138.562402777369', 'Dans Yuru Camp au 2ème épisode de la saison 1, Rin pose sa tente à cet endroit pour camper.', '../img/Fumatoppara.jpg'),
+	(3, 'Supermarché Zebra', '35.4330403874025', '138.44117826335372', 'Dans Yuru Camp au 3ème épisode de la saison 1, c\'est le supermarché dans lequel Aoi travaille à mi-temps. Dans la vrai-vie, ce supermarché s\'appelle Selva Minobu.', '../img/Zebra.jpg'),
+	(4, 'Station Yamanashi', '35.68499187607698', '138.68285735481624', 'Dans Yuru Camp au 4ème épisode de la saison 1, Nadeshiko, Aoi et Chiaki se retrouve dans le cadre du 1er camping organisé par leur club.', '../img/Station_Yamanashi.jpg'),
+	(5, 'Temple Mitsuke Tenjin', '34.72983228298222', '137.86428796441947', 'Dans Yuru Camp au 2ème épisode de la saison 2, c\'est le temple que Rin visite dans le cadre de son camping du nouvel an.', '../img/Temple_Mitsuke.jpg');
 -- Listage de la structure de table siteweb. personnage
 CREATE TABLE IF NOT EXISTS `personnage` (
   `Id` int unsigned NOT NULL AUTO_INCREMENT,
@@ -89,7 +92,11 @@ CREATE TABLE IF NOT EXISTS `studio` (
 
 -- Listage des données de la table siteweb.studio : ~0 rows (environ)
 INSERT INTO `studio` (`Id`, `Nom`, `Latitude`, `Longitude`, `Description`, `Path`) VALUES
-	(1, 'Ghibli', '35.70320', '139.52924', 'Le studio qui a produit de nombreux film comme Mon Voisin Totoro.', '../img/ghibli.jpg');
+	(1, 'Ghibli', '35.70320', '139.52924', 'Le studio qui a produit de nombreux film comme Mon Voisin Totoro.', '../img/ghibli.jpg'),
+	(2, 'C-Station', '35.70057743499931', '139.4780446048134', 'C\'est le studio qui a produit des animes comme Yuru Camp ou Akame Ga Kill.', '../img/C-Station.jpg'),
+	(3, 'Gokumi', '35.71670545531594', '139.62550699875445', 'Il a produit des animes comme Toji no Miko ou Kin-iro Mosaic.', '../img/Gokumi.jpg'),
+	(4, 'Ufotable', '35.716796985115614', '139.62519613182425', 'Ce studio a produit des animes très connu comme Demon Slayer ou Fate/Zero', '../img/Ufotable.png'),
+	(5, 'P.A.WORKS', '35.72277064681467', '139.4759399101618', 'Un studio qui a produit de nombreux animes comme Ya Boy Kongming! ou Shirobako.', '../img/PA-Works.jpg');
 
 -- Listage de la structure de table siteweb. utilisateur
 CREATE TABLE IF NOT EXISTS `utilisateur` (
