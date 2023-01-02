@@ -1,22 +1,12 @@
 var query = `
-    query($id: Int,$page: Int,$perPage: Int,$search : String){
-      Page(page: $page, perPage: $perPage){
-        pageInfo{
-          total
-          currentPage
-          lastPage
-          hasNextPage
-          perPage
-        }
-        media (id: $id,search: $search, type : ANIME){
+    query($search : String){
+        Media (search: $search, type : ANIME){
           id
           coverImage{
-            medium
             large
           }
           title{
             romaji
-          }
         }
       }
     }
@@ -31,14 +21,17 @@ function handleResponse(response){
 
 function handleData(data){
     console.log(data);
-    $("div#rep").text(data.data.Page.media[0].id + " : " + data.data.Page.media[0].title.romaji + "\n"
-    + data.data.Page.media[1].id + " : " + data.data.Page.media[1].title.romaji + "\n"
-    + data.data.Page.media[2].id + " : " + data.data.Page.media[2].title.romaji + "\n"
-    )
-    $("img").attr("src",data.data.Page.media[0].coverImage.large)
+    $("div#rep").text(data.data.Media.title.romaji);
+    $("img").attr("src",data.data.Media.coverImage.large);
+    $("#favori").css("display","block");
+    $("#id").text(data.data.Media.id);
 }
 
 function handleError(error){
+    $("#favori").css("display","none");
+    $("div#rep").text("");
+    $("img").attr("src","");
+    $("#id").text("");
     alert('No result');
     console.error(error);
 }

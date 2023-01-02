@@ -7,6 +7,30 @@
     text-align: center;
 }
 
+p {
+    font-size: 150%;
+}
+
 img {
-    margin: 0 auto;
+    margin: 0 auto 20px;
+}
+
+#test{
+    margin: 0 10px;
+}
+
+#rep {
+    margin: 20px auto;
+    white-space:pre-line;
+}
+
+#favori {
+    width: 15% ;
+    margin: 0 auto 20px;
+    display: none;
+}
+
+#id {
+    display: none;
+    margin : 0;
 }

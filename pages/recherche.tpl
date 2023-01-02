@@ -12,15 +12,19 @@
 
     <div id="main-content">
 
+        <p id="id"></p>
+
         <p>Recherche d'anime</p>
 
         <div>
           <input id="test" value=""> <button>rechercher</button><br>
         </div>
 
-        <div style="white-space:pre-line;" id="rep"></div>
+        <div id="rep"></div>
 
         <img src="">
+
+        <button id="favori">Mettre en favori</button>
 
     </div>
 
