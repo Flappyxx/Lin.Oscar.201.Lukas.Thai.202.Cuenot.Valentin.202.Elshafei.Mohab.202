@@ -23,7 +23,7 @@ function handleData(data){
     $("div#rep").text(data.data.Media.title.romaji);
     $("img").attr("src",data.data.Media.coverImage.large);
     $("#favori").css("display","block");
-    $("#id").text(data.data.Media.id);
+    $("#id").attr("value",data.data.Media.id);
 }
 
 function handleError(error){
@@ -77,9 +77,17 @@ function afficher(){
 }
 
 function favori(){
+    let idAnime = $("#id").val();
+    let data = {id : idAnime}
     $.ajax({
         //L'URL de la requête 
         url: "putFavAnime.php",
+
+        data: data,
+
+        async: false,
+
+        dataType: "json",
 
         //La méthode d'envoi (type de requête)
         method: "POST"

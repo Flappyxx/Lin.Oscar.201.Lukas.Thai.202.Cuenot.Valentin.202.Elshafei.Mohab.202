@@ -25,7 +25,8 @@ function handleData(data){
 }
 
 function handleError(error){
-    //Pas d'anime favori
+    $("p#nom").text("Pas d'anime favori");
+    console.error(error);
 }
 
 $(document).ready(init)
