@@ -85,10 +85,6 @@ function favori(){
 
         data: data,
 
-        async: false,
-
-        dataType: "json",
-
         //La méthode d'envoi (type de requête)
         method: "POST"
     
