@@ -23,7 +23,7 @@
 
         <img src="">
 
-        <input id="id" name="id" value="<?= $id?>">
+        <input id="id" name="id" value="">
 
         <button id="favori">Mettre en favori</button>
 
