@@ -1,6 +1,6 @@
 var query = `
-    query($search : String){
-        Media (search: $search, type : ANIME){
+    query($id : Int){
+        Media (id: $id, type : ANIME){
           id
           coverImage{
             large
@@ -20,39 +20,23 @@ function handleResponse(response){
 }
 
 function handleData(data){
-    $("div#rep").text(data.data.Media.title.romaji);
-    $("img").attr("src",data.data.Media.coverImage.large);
-    $("#favori").css("display","block");
-    $("#id").text(data.data.Media.id);
+    //afficher l'anime
 }
 
 function handleError(error){
-    $("#favori").css("display","none");
-    $("div#rep").text("");
-    $("img").attr("src","");
-    $("#id").text("");
-    alert('No result');
-    console.error(error);
+    //Pas d'anime favori
 }
 
 $(document).ready(init)
 
 function init(){
-    $("button").click(afficher);
-
-    
-    $('input').keypress(function(event){
-      var keycode = (event.keyCode ? event.keyCode : event.which);
-      if(keycode == '13'){
-        afficher();
-      }
-    });
+    chercher();
 }
 
-function afficher(){
-    var search = $("input").val();
+function chercher(){
+    var id = $("input").val();
     var variables = {
-        search: search
+        id: id
     };
 
     var url = 'https://graphql.anilist.co',
