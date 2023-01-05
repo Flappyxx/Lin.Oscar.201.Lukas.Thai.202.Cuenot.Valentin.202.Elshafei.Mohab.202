@@ -31,6 +31,6 @@ img {
 }
 
 #id {
-    display: none;
+    display: block;
     margin : 0;
 }

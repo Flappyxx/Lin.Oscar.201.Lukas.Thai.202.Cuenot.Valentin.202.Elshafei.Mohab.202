@@ -30,7 +30,7 @@ function handleError(error){
     $("#favori").css("display","none");
     $("div#rep").text("");
     $("img").attr("src","");
-    $("#id").text("");
+    $("#id").val("");
     alert('No result');
     console.error(error);
 }
@@ -38,8 +38,9 @@ function handleError(error){
 $(document).ready(init)
 
 function init(){
-    $("button").click(afficher);
+    $("button#rechercher").click(afficher);
 
+    $("button#favori").click(favori);
     
     $('input').keypress(function(event){
       var keycode = (event.keyCode ? event.keyCode : event.which);
@@ -52,7 +53,7 @@ function init(){
 }
 
 function afficher(){
-    var search = $("input").val();
+    var search = $("input#recherche").val();
     var variables = {
         search: search
     };
@@ -75,3 +76,13 @@ function afficher(){
                     .catch(handleError);
 }
 
+function favori(){
+    $.ajax({
+        //L'URL de la requête 
+        url: "putFavAnime.php",
+
+        //La méthode d'envoi (type de requête)
+        method: "POST"
+    
+    })
+}

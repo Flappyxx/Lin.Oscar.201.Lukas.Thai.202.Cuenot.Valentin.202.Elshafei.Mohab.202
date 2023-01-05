@@ -12,17 +12,18 @@
 
     <div id="main-content">
 
-        <p id="id"></p>
 
         <p>Recherche d'anime</p>
 
         <div>
-          <input id="test" value=""> <button>rechercher</button><br>
+          <input id="recherche" value=""> <button id="rechercher">rechercher</button><br>
         </div>
 
         <div id="rep"></div>
 
         <img src="">
+
+        <input id="id" name="id" value="<?= $id?>">
 
         <button id="favori">Mettre en favori</button>
 
