@@ -9,7 +9,7 @@
 <body>  
 
     <div id="main-content">
-        Bienvenue sur le site Weeb !!!
+        <h2>Bienvenue sur le site Weeb !!!</h2>
         
     </div>
 

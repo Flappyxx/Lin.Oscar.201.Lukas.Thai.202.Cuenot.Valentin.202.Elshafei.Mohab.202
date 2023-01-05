@@ -1,4 +1,14 @@
 #main-content {
     border: 1px solid black;
     margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+#main-content > * {
+    text-align: center;
+}
+
+img {
+    margin: 0 auto 20px;
 }
