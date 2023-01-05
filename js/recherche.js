@@ -47,6 +47,8 @@ function init(){
         afficher();
       }
     });
+
+    //rajouter l'event du bouton favori
 }
 
 function afficher(){
