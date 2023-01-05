@@ -15,7 +15,7 @@
 
         <p>Anime favori :</p>
 
-        <p></p>
+        <p id="nom"></p>
 
         <img src="">
 

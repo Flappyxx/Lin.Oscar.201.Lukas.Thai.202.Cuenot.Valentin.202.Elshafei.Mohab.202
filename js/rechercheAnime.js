@@ -20,7 +20,8 @@ function handleResponse(response){
 }
 
 function handleData(data){
-    //afficher l'anime
+    $("p#nom").text(data.data.Media.title.romaji);
+    $("img").attr("src",data.data.Media.coverImage.large);
 }
 
 function handleError(error){
@@ -34,26 +35,42 @@ function init(){
 }
 
 function chercher(){
-    var id = $("input").val(); //chercher l'id depuis la BD
-    var variables = {
-        id: id
-    };
+     //chercher l'id depuis la BD
+    $.ajax({
+        //L'URL de la requête 
+        url: "getFavAnime.php",
 
-    var url = 'https://graphql.anilist.co',
-    options = {
-    method: 'POST',
-    headers: {
-        'Content-Type' : 'application/json',
-        'Accept' : 'application/json',
-    },
-    body : JSON.stringify({
-        query: query,
-        variables: variables
+        //La méthode d'envoi (type de requête)
+        method: "GET",
+    dataType:"json"
+    
     })
-    };
-
-    fetch (url,options).then(handleResponse)
-                    .then(handleData)
-                    .catch(handleError);
+    //Ce code sera exécuté en cas de succès - La réponse du serveur est passée à done()
+    /*On peut par exemple convertir cette réponse en chaine JSON et insérer
+     * cette chaine dans un div id="res"*/
+    .done(function(response){
+        let id = response.IdAnimeFav;
+        var variables = {
+            id: id
+        };
+    
+        var url = 'https://graphql.anilist.co',
+        options = {
+        method: 'POST',
+        headers: {
+            'Content-Type' : 'application/json',
+            'Accept' : 'application/json',
+        },
+        body : JSON.stringify({
+            query: query,
+            variables: variables
+        })
+        };
+    
+        fetch (url,options).then(handleResponse)
+                        .then(handleData)
+                        .catch(handleError);
+    })
+    
 }
 
