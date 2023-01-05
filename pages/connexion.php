@@ -49,7 +49,7 @@ function verif_ident($pseudo,$mdp){
 
 function register($pseudo,$mdp){
     require('connectSQL.php');
-    $sql="INSERT INTO utilisateur VALUES(:pseudo,:mdp)";
+    $sql="INSERT INTO utilisateur(identifiant,password) VALUES(:pseudo,:mdp)";
     try {
         $commande = $pdo->prepare($sql);
         $commande->bindParam(':pseudo', $pseudo);
