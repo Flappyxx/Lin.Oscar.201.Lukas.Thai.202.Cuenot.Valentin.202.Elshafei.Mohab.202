@@ -95,7 +95,7 @@ INSERT INTO `studio` (`Id`, `Nom`, `Latitude`, `Longitude`, `Description`, `Path
 	(1, 'Ghibli', '35.70320', '139.52924', 'Le studio qui a produit de nombreux film comme Mon Voisin Totoro.', '../img/ghibli.jpg'),
 	(2, 'C-Station', '35.70057743499931', '139.4780446048134', 'C\'est le studio qui a produit des animes comme Yuru Camp ou Akame Ga Kill.', '../img/C-Station.jpg'),
 	(3, 'Gokumi', '35.71670545531594', '139.62550699875445', 'Il a produit des animes comme Toji no Miko ou Kin-iro Mosaic.', '../img/Gokumi.jpg'),
-	(4, 'Ufotable', '35.716796985115614', '139.62519613182425', 'Ce studio a produit des animes très connu comme Demon Slayer ou Fate/Zero', '../img/Ufotable.png'),
+	(4, 'Ufotable', '35.716796985115614', '139.62519613182425', 'Ce studio a produit des animes très connu comme Demon Slayer ou Fate/Zero.', '../img/Ufotable.png'),
 	(5, 'P.A.WORKS', '35.72277064681467', '139.4759399101618', 'Un studio qui a produit de nombreux animes comme Ya Boy Kongming! ou Shirobako.', '../img/PA-Works.jpg');
 
 -- Listage de la structure de table siteweb. utilisateur
