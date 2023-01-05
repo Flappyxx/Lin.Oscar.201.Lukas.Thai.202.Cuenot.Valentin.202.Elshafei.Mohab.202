@@ -34,7 +34,7 @@ function init(){
 }
 
 function chercher(){
-    var id = $("input").val();
+    var id = $("input").val(); //chercher l'id depuis la BD
     var variables = {
         id: id
     };
