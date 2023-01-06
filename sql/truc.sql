@@ -102,7 +102,7 @@ INSERT INTO `studio` (`Id`, `Nom`, `Latitude`, `Longitude`, `Description`, `Path
 CREATE TABLE IF NOT EXISTS `utilisateur` (
   `Identifiant` varchar(50) CHARACTER SET utf8mb4 NOT NULL,
   `Password` varchar(100) CHARACTER SET utf8mb4 NOT NULL,
-  `IdAnimeFav` varchar (10) CHARACTER SET utf8mb4 NOT NULL,
+  `IdAnimeFav` varchar (10) CHARACTER SET utf8mb4,
   PRIMARY KEY (`Identifiant`)
 ) ENGINE=InnoDB DEFAULT CHARSET=armscii8 ;
 
