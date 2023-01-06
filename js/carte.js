@@ -1,6 +1,6 @@
 $(document).ready(function(){
 
-	var map = L.map('map', {center: [35.34819669272675, 138.24222350736719],zoom: 9);
+	var map = L.map('map', {center: [35.34819669272675, 138.24222350736719],zoom: 9});
 	var base = L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png').addTo(map);
 	var liste_studio=[];
 	var liste_endroit=[];
